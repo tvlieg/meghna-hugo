@@ -1,0 +1,24 @@
+{{ $data := index site.Data site.Language.Lang }}
+
+{{ if $data.concerts.concerts.enable}}
+{{ with $data.concerts.concerts}}
+{{"<!-- concerts -->" | safeHTML}}
+<section id="concerts" class="concerts section-sm bg-1 overly" style='background-image: url("{{ .bg_image_webp | absURL }}")'>
+	<!-- this image is for trigger this section fallback background image -->
+	<img src="{{ .bg_image_webp | absURL }}" style="display: none;" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url({{ .bg_image | absURL }})'">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2>{{ .title | markdownify }}</h2>
+				<p>{{ .content | markdownify }}</p>
+        <p>
+          <a href="https://www.songkick.com/artists/10221844" class="songkick-widget" data-theme="dark" data-detect-style="true" data-background-color="transparent" data-locale="en"></a>
+          <script src="//widget.songkick.com/10221844/widget.js"></script>
+        </p>
+			</div>
+		</div>
+	</div>
+</section>
+{{"<!-- /concerts -->" | safeHTML}}
+{{ end }}
+{{ end }}
