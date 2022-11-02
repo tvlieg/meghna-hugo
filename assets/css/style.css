@@ -504,6 +504,46 @@ a:hover {
   letter-spacing: 1px;
 }
 
+.hero-area .block .social-icon {
+  padding: 60px 0 35px;
+}
+
+.hero-area .block .social-icon ul {
+  text-align: center;
+}
+
+.hero-area .block .social-icon ul li {
+  margin-bottom: 4px;
+}
+
+.hero-area .block .social-icon ul li a {
+  background-color: transparent;
+  border: 1px solid transparent;
+  display: block;
+  height: 70px;
+  width: 70px;
+  transition: all 400ms ease-out 0s;
+}
+
+.hero-area .block .social-icon ul li a:hover {
+  background: #57cbcc;
+}
+
+.hero-area .block .social-icon ul li a:hover i {
+  color: #fff;
+  opacity: 1;
+}
+
+.hero-area .block .social-icon ul li a i {
+  color: #55606a;
+  display: inline-block;
+  font-size: 32px;
+  line-height: 70px;
+  margin: 0;
+  opacity: 1;
+  transition: all 400ms ease-out 0s;
+}
+
 .hero-area-video {
   height: 100vh;
   position: inherit !important;
